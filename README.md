@@ -1,6 +1,6 @@
 # oni-test
 
-:mag: Easily test [Oni] plugins using the [Oni] API.
+:mag: Easily test [Oni](https://github.com/onivim/oni) plugins using the [Oni API](https://onivim.github.io/oni-api/).
 
 This is the next generation of the 'integration' / 'CiTests' that were in the core Oni repo,
 intended to be generalized so that any Oni plugin can easily tests against a live Oni instance.
