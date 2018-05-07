@@ -9,7 +9,7 @@
     "scripts": {
         "precommit": "pretty-quick --staged",
         "build": "tsc",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "mocha lib/test"
     },
     "repository": {
         "type": "git",
@@ -29,8 +29,10 @@
     },
     "dependencies": {
         "@types/minimist": "^1.2.0",
+        "@types/mocha": "^5.2.0",
         "@types/node": "^10.0.4",
         "minimist": "^1.2.0",
+        "mocha": "^5.1.1",
         "prettier": "^1.12.1",
         "spectron": "^3.8.0"
     }
