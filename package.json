@@ -4,7 +4,7 @@
     "description": "Easily test Oni plugins using the Oni API",
     "main": "lib/index.js",
     "bin": {
-        "oni-test": "lib/cli.js"
+        "oni-test": "bin/cli.js"
     },
     "scripts": {
         "precommit": "pretty-quick --staged",
