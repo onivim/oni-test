@@ -24,4 +24,4 @@ install:
 - yarn install
 script:
 - npm run build
-- npm run test
+- ./build/travis-test.sh
