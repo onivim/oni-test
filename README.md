@@ -1,5 +1,7 @@
 # oni-test
 
+[![Build Status](https://travis-ci.org/onivim/oni-test.svg?branch=master)](https://travis-ci.org/onivim/oni-test)
+
 :mag: Easily test [Oni](https://github.com/onivim/oni) plugins using the [Oni API](https://onivim.github.io/oni-api/).
 
 This is the next generation of the 'integration' / 'CiTests' that were in the core Oni repo,
@@ -27,7 +29,7 @@ And then create your first test case:
 const Oni = require("oni-api")
 
 export const test = async (oni) => {
-    
+
     // Wait for editors to load
     await oni.automation.waitForEditors()
 
@@ -53,15 +55,15 @@ This runs all tests in the `test` folder.
 
 The `oni-test` command exposes several options:
 
-- `--path` - String path to the Oni exectable to launch.
+*   `--path` - String path to the Oni exectable to launch.
 
 > If this is not specified, `oni-test` will look to the `$ONI_EXECUTABLE_PATH` environment variable. Recommend using with `ovm` to get an oni executable for a particular version.
 
-- `--args` - Array of arguments to pass to Oni on launch.
+*   `--args` - Array of arguments to pass to Oni on launch.
 
 > If testing a custom plugin / extension, you'll want to pass your built plugin in the `--plugin` paramter.
 
-- The final parameter is a `glob` of test files to run.
+*   The final parameter is a `glob` of test files to run.
 
 ## Test File Format
 
@@ -77,4 +79,3 @@ export const settings = {
     },
 }
 ```
-
