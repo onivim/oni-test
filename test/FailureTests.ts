@@ -7,13 +7,19 @@ import { execSync, spawnSync } from "child_process"
 const binPath = process.execPath
 const coreScriptPath = path.join(__dirname, "..", "..", "bin", "cli.js")
 
+const developmentBuildPath = path.join(__dirname, "..", "..", ".local-oni")
+
 describe("failure cases", () => {
     it("logs failure", () => {
         console.log(binPath + " " + coreScriptPath)
 
         let result = null
         try {
-            result = spawnSync(binPath, [coreScriptPath], {}).stdout.toString("utf8")
+            result = spawnSync(
+                binPath,
+                [coreScriptPath, "--develop", developmentBuildPath],
+                {},
+            ).stdout.toString("utf8")
         } catch (err) {
             console.log("return code: " + err.status)
         }
