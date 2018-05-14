@@ -29,10 +29,13 @@
         "typescript": "^2.8.3"
     },
     "dependencies": {
+        "@types/chalk": "^2.2.0",
         "@types/electron": "^1.6.10",
         "@types/minimist": "^1.2.0",
         "@types/mocha": "^5.2.0",
         "@types/node": "^10.0.4",
+        "chalk": "^2.4.1",
+        "find-process": "^1.1.1",
         "minimist": "^1.2.0",
         "mocha": "^5.1.1",
         "prettier": "^1.12.1",

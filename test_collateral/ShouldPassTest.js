@@ -1,5 +1,8 @@
-import * as assert from "assert"
+const assert = require("assert")
 
-const test = () => {
-    assert.strictEqual(1, 1)
+module.exports = {
+    test: () => {
+        console.log("This test should pass")
+        assert.strictEqual(1, 1)
+    },
 }

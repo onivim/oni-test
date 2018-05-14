@@ -2,9 +2,9 @@ import * as assert from "assert"
 import * as fs from "fs"
 import * as path from "path"
 
-import { Oni } from "./Oni"
-
 import { ensureProcessNotRunning } from "./ensureProcessNotRunning"
+import { Oni } from "./Oni"
+import { normalizePath } from "./Utility"
 
 // tslint:disable:no-console
 
@@ -17,10 +17,8 @@ export interface ITestCase {
     }
 }
 
-const normalizePath = p => p.split("\\").join("/")
-
 export const loadTest = (rootPath: string, testName: string): ITestCase => {
-    const testPath = path.join(rootPath, testName + ".js")
+    const testPath = path.join(rootPath, testName)
 
     const testMeta = require(testPath)
     const testDescription = testMeta.settings || {}

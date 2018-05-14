@@ -1,4 +1,4 @@
-import * as assert from "assert"
+const assert = require("assert")
 
 const test = () => {
     assert.strictEqual(0, 1)
