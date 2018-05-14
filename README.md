@@ -53,11 +53,13 @@ This runs all tests in the `test` folder.
 
 ## Options
 
-The `oni-test` command exposes several options:
+By default, `oni-test` uses an Oni executable defined by the `ONI_EXECUTABLE_PATH` environment variable.
 
-*   `--path` - String path to the Oni exectable to launch.
+However, you can override this by passing the `--develop` flag:
 
-> If this is not specified, `oni-test` will look to the `$ONI_EXECUTABLE_PATH` environment variable. Recommend using with `ovm` to get an oni executable for a particular version.
+*   `--develop` - String path to a local built Oni folder. This should be the _root_ folder, so I've cloned Oni to `~/oni`, then I'd pass that path to development. This makes
+
+Other arguments are also available:
 
 *   `--args` - Array of arguments to pass to Oni on launch.
 
