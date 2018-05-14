@@ -2,10 +2,15 @@
 
 "use strict"
 
+const parseArgs = require("minimist")
+
+const result = parseArgs(process.argv)
+
+const args = result["_"]
+const testPath = args[args.length - 1]
+
 const path = require("path")
 const OniTest = require("./../lib/src/OniTest")
-
-const testPath = path.join(__dirname, "./../test_collateral/ShouldFailTest.js")
 
 const test = new OniTest.OniTest(
     {
