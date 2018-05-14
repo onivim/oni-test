@@ -9,5 +9,8 @@ set -e
 
 git clone https://github.com/onivim/oni.git .local-oni
 cd .local-oni
+
+echo Building Oni in: "$PWD"
+
 yarn install
 yarn build
