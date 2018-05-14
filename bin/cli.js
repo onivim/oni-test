@@ -2,4 +2,5 @@
 
 "use strict"
 
-console.log("Hello world")
+const OniTest = require("./../lib/src/OniTest")
+const test = new OniTest({}, "", 1)

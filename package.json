@@ -23,11 +23,13 @@
     },
     "homepage": "https://github.com/onivim/oni-test#readme",
     "devDependencies": {
+        "@types/webdriverio": "^4.10.1",
         "husky": "^0.14.3",
         "pretty-quick": "^1.4.1",
         "typescript": "^2.8.3"
     },
     "dependencies": {
+        "@types/electron": "^1.6.10",
         "@types/minimist": "^1.2.0",
         "@types/mocha": "^5.2.0",
         "@types/node": "^10.0.4",
