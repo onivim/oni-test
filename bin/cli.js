@@ -28,8 +28,8 @@ if (result["develop"]) {
 
 const test = new OniTest.OniTest(
     {
-        executablePath: "E:/oni/node_modules/.bin/electron.cmd",
-        executableArgs: ["E:/oni/lib/main/src/main.js"],
+        executablePath: executablePath,
+        executableArgs: executableArgs,
     },
     testPath,
     1,
