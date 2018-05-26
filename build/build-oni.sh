@@ -14,6 +14,6 @@ echo Building Oni in: "$PWD"
 
 yarn install
 yarn build
-yarn pack
+yarn run pack
 
 ls -a dist
