@@ -11,6 +11,7 @@ const failureTestPath = path.join(__dirname, "..", "..", "test_collateral", "Sho
 describe("failure cases", () => {
     it("logs failure", () => {
         console.log(binPath + " " + coreScriptPath)
+        console.log("Oni executable path in test: " + process.env["ONI_EXECUTABLE_PATH"])
 
         let result: cp.SpawnSyncReturns<Buffer> = null
         try {
