@@ -3,6 +3,8 @@
 echo Travis build - detected OS is: "$TRAVIS_OS_NAME"
 set -e
 
+echo Oni executable path is: "$ONI_EXECUTABLE_PATH"
+
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
   # Initialize display driver
   # This is needed for our unit tests (electron-mocha)

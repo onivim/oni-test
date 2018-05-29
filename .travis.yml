@@ -21,6 +21,7 @@ addons:
     - bsdtar
 install:
 - npm install -g yarn
+- npm install -g oni-version-manager
 - yarn install
 script:
 - npm run build
