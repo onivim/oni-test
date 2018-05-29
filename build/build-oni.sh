@@ -13,6 +13,7 @@ cd .local-oni
 echo Building Oni in: "$PWD"
 
 yarn install
+yarn check-cached-binaries
 yarn build
 yarn run pack --dir
 
