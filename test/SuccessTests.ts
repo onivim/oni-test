@@ -15,6 +15,9 @@ describe("success cases", () => {
             result = cp.spawnSync(binPath, [coreScriptPath, successTestPah], {})
         } catch (err) {}
 
+        console.log("Return code: " + result.status)
+        console.log("Output: " + result.output.toString())
+
         assert.strictEqual(result.status, 0, "Status should be 0, since the test passed")
     })
 })

@@ -9,7 +9,7 @@
     "scripts": {
         "precommit": "pretty-quick --staged",
         "build": "tsc",
-        "test": "mocha lib/test"
+        "test": "mocha --timeout 60000 lib/test"
     },
     "repository": {
         "type": "git",
