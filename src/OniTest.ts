@@ -39,6 +39,7 @@ export class OniTest {
 
         if (this._failed) {
             logFailure("FAILED: " + this._testFile)
+            process.exit(1)
         } else {
             logSuccess("PASSED: " + this._testFile)
         }
@@ -132,11 +133,11 @@ export class OniTest {
             const anyFailures = anyLogFailure(logs)
 
             logs.forEach(log => {
+                // TODO: Add verbose flag
                 const logMessage = `[${log.level}] ${log.message}`
 
-                console.log(logMessage)
-
                 if (isLogFailure(log)) {
+                    console.log(logMessage)
                     this._markFailed(logMessage)
                 }
             })
@@ -149,7 +150,8 @@ export class OniTest {
     private async _writeMainProcessLogs(): Promise<void> {
         const mainProcessLogs: any[] = await this._oni.client.getMainProcessLogs()
         mainProcessLogs.forEach(l => {
-            console.log("[MAIN] " + l)
+            // TODO: Add verbose flag
+            // console.log("[MAIN] " + l)
         })
     }
 

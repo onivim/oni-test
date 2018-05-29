@@ -17,6 +17,9 @@ describe("failure cases", () => {
             result = cp.spawnSync(binPath, [coreScriptPath, failureTestPath], {})
         } catch (err) {}
 
+        console.log("Status code: " + result.status)
+        console.log("Output: " + result.output)
+
         assert.strictEqual(
             result.status,
             1,
