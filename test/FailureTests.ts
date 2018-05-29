@@ -25,5 +25,10 @@ describe("failure cases", () => {
             1,
             "Status should be 1, since this is running a failure test",
         )
+
+        assert.ok(
+            result.output.indexOf("derpy") >= 0,
+            "The failure reason should be included in the output",
+        )
     })
 })
