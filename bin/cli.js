@@ -8,6 +8,7 @@ const result = parseArgs(process.argv)
 const os = require("os")
 
 const args = result["_"]
+console.dir(args)
 const testPath = args[args.length - 1]
 
 const path = require("path")
@@ -26,10 +27,12 @@ if (result["develop"]) {
     executableArgs = []
 }
 
+console.log("Test Path: " + testPath)
+
 const test = new OniTest.OniTest(
     {
-        executablePath: "E:/oni/node_modules/.bin/electron.cmd",
-        executableArgs: ["E:/oni/lib/main/src/main.js"],
+        executablePath: executablePath,
+        executableArgs: executableArgs,
     },
     testPath,
     1,
