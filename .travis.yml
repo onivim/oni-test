@@ -25,5 +25,5 @@ install:
 - yarn install
 script:
 - npm run build
-- ./build/build-oni.sh
+- source ./build/build-oni.sh
 - ./build/travis-test.sh
