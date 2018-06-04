@@ -18,7 +18,11 @@ describe("failure cases", () => {
         } catch (err) {}
 
         console.log("Status code: " + result.status)
-        console.log("Output: " + result.output)
+        const outputString = result.output.toString()
+        console.log("Output: ")
+        console.log("---------------")
+        console.log(outputString)
+        console.log("---------------")
 
         assert.strictEqual(
             result.status,
@@ -27,7 +31,7 @@ describe("failure cases", () => {
         )
 
         assert.ok(
-            result.output.indexOf("derpy") >= 0,
+            outputString.indexOf("derpy") >= 0,
             "The failure reason should be included in the output",
         )
     })
