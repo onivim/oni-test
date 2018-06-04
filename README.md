@@ -1,6 +1,8 @@
 # oni-test
 
 [![Build Status](https://travis-ci.org/onivim/oni-test.svg?branch=master)](https://travis-ci.org/onivim/oni-test)
+[![Build status](https://ci.appveyor.com/api/projects/status/1wt1ft7ynam7k32g/branch/master?svg=true)](https://ci.appveyor.com/project/bryphe/oni-test/branch/master)
+[![npm version](https://badge.fury.io/js/oni-test.svg)](https://badge.fury.io/js/oni-test)
 
 :mag: Easily test [Oni](https://github.com/onivim/oni) plugins using the [Oni API](https://onivim.github.io/oni-api/).
 
