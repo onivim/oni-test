@@ -22,4 +22,9 @@ if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
   export ONI_NEOVIM_PATH
 fi
 
+
+npm run test
+npm run test
+npm run test
+npm run test
 npm run test
