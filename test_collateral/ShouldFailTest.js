@@ -1,5 +1,8 @@
 const assert = require("assert")
 
-const test = () => {
-    assert.strictEqual(0, 1, "some derpy comparison failed")
+module.exports = {
+    test: () => {
+        console.log("This test should fail")
+        assert.strictEqual(0, 1, "derpy comparison")
+    },
 }
