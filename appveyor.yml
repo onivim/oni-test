@@ -1,0 +1,30 @@
+# Test against the latest version of this Node.js version
+environment:
+  nodejs_version: "8"
+
+os: unstable
+
+platform:
+    - x86
+    - x64
+
+# Install scripts. (runs after repo cloning)
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
+  # Workaround https://github.com/npm/npm/issues/18380
+  - npm install -g yarn
+  - npm install -g oni-version-manager
+  - node --version
+  - npm --version
+  # install modules
+  - yarn install
+  - ovm install master
+
+# Post-install test scripts.
+test_script:
+  - yarn build
+  - yarn test
+
+# Don't actually build.
+build: off
