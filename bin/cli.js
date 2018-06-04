@@ -6,6 +6,8 @@ const parseArgs = require("minimist")
 
 const result = parseArgs(process.argv)
 const os = require("os")
+const fs = require("fs")
+const glob = require("glob")
 
 const args = result["_"]
 console.dir(args)
@@ -27,14 +29,33 @@ if (result["develop"]) {
     executableArgs = []
 }
 
-console.log("Test Path: " + testPath)
+console.log("Specified tests: " + testPath)
 
-const test = new OniTest.OniTest(
-    {
-        executablePath: executablePath,
-        executableArgs: executableArgs,
-    },
-    testPath,
-    1,
-)
-test.run()
+const allTests = glob.sync(testPath)
+
+if (!allTests || !allTests.length) {
+    console.error("No test files found with path: " + testPath)
+    process.exit(1)
+}
+
+const executeTest = async testPath => {
+    const test = new OniTest.OniTest(
+        {
+            executablePath: executablePath,
+            executableArgs: executableArgs,
+        },
+        testPath,
+        1,
+    )
+
+    await test.run()
+}
+
+const executeTests = async tests => {
+    while (tests.length > 0) {
+        const test = tests.shift()
+        await executeTest(test)
+    }
+}
+
+executeTests(allTests).then(() => console.log("--Completed"))
