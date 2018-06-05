@@ -34,7 +34,7 @@ describe("success cases", () => {
     it("runs multiple tests", () => {
         let result: cp.SpawnSyncReturns<Buffer> = null
         try {
-            result = cp.spawnSync(binPath, [coreScriptPath, successTestPah], {})
+            result = cp.spawnSync(binPath, [coreScriptPath, multipleSuccessGlob], {})
         } catch (err) {}
 
         console.log("Return code: " + result.status)
