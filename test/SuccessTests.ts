@@ -42,12 +42,12 @@ describe("success cases", () => {
         console.log("Output: " + outputString)
 
         assert.ok(
-            outputString.indexOf("[ShouldPassTest]") >= 0,
-            "The [ShouldPassTest] should be present",
+            outputString.indexOf("ShouldPassTest.js") >= 0,
+            "The ShouldPassTest.js should be present",
         )
         assert.ok(
-            outputString.indexOf("[ShouldPassAgainTest]") >= 0,
-            "The [ShouldPassAgainTest] should also be present in the output",
+            outputString.indexOf("ShouldPassAgainTest.js") >= 0,
+            "The ShouldPassAgainTest.js should also be present in the output",
         )
 
         assert.strictEqual(result.status, 0, "Status should be 0, since the test passed")
